@@ -11,17 +11,23 @@ let liElement = document.createElement("li");
 let textElement = document.createTextNode(tarefa);
 liElement.appendChild(textElement);
 
- let linkElement = document.createElement("a");
- linkElement.setAttribute("href", "#");
- let textli = document.createTextNode("Excluir");
-linkElement.appendChild(textli);
+let linkElement = document.createElement("a");
+linkElement.setAttribute("href", "#");
+let textLink = document.createTextNode("x");
+
+let posicao = tarefas.indexOf(tarefa);
+
+linkElement.setAttribute("onclick", `deletarTarefa(${posicao})`);
+ 
+
+linkElement.appendChild(textLink);
+
 
 liElement.appendChild(linkElement);
- 
 
 listElement.appendChild(liElement);
  
-   });
+});
   }
 
    
@@ -38,5 +44,25 @@ return false;
 }
    
    }
+   function deletarTarefa(posicao){
+     tarefas.splice(posicao, 1);
+     renderTarefa();
+   }
 
+
+
+
+
+
+
+
+
+
+
+
+   
    buttonElement.onclick = adicionarterefas;
+   // function excluirTarefa(posicao){
+   //  tarefas.splice(posicao, 1);
+   //  renderTarefa();
+   // }

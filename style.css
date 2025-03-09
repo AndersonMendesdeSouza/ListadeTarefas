@@ -1,48 +1,95 @@
 *{
     margin: 0;
     padding: 0;
-
+    outline: 0;
 }
 body{
+    background-color: #d8ceced0;
+}
+
+main{
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    justify-content: center;
 }
 #app{
     width: 600px;
     height: 400px;
-     
+    background-color: #ffffff;
     display: flex;
-  background-color: #ffffff;
-    align-items: center;
-    flex-direction: column;
+flex-direction: column;
+
 }
 .topo{
-    background-color: color-mix(in sRGB, rgb(255, 255, 255) 10%, blue 50%);
     width: 100%;
     height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-color: blue;
+   
 }
 .topo h1{
-    font-size: 25px;
-     
+    text-align: center;
+    margin: 10px;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.topo input{
- padding: 7px;
+
+.elementos{
+    text-align: center;
   
 }
-.elementos{
-    display: flex;
+.elementos input{
+    width: 400px;
+    border: 0;
+    height: 30px;
+  padding-left: 10px;
+    border-radius: 2px;
+   
+}
+.elementos button{ 
+     border-radius: 2px;
+    width: 100px;
+    background-color: #ffffff;
+    border: 0;
+ height: 30px;
+ margin-left: 10px;
+ 
+}
+.corpo{
+  margin-left:20px ;
+ 
+  
+}
+.corpo li{
+    list-style: none;
+    background-color: #d8ceced0;
+    width: 500px;
+    padding: 6px;
     margin: 10px;
    
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+     padding-left: 20px;
+     font-size: 20px;
 }
-button{
+.corpo a{
+    text-decoration: none;
+    color: red;
+    
+  flex-direction: row-reverse;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ padding-right: 10px;
   
-   
+   transition: 0.3s;
+}
+.corpo a:hover{
+    transform: scale(1.1);
+}
+.corpo h3{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 20px;
+  font-size: 25px;
 }
