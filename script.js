@@ -2,7 +2,9 @@
    let inputElement = document.querySelector("#app input");
    let buttonElement = document.querySelector("#app button");
 
-   let tarefas = [];
+   let tarefas = JSON.parse(localStorage.getItem("@listaTarefas")) || [];
+
+   renderTarefa();
 
   function renderTarefa(){
    listElement.innerHTML = "";
@@ -27,7 +29,7 @@ liElement.appendChild(linkElement);
 
 listElement.appendChild(liElement);
  
-});
+})
   }
 
    
@@ -41,28 +43,21 @@ return false;
    inputElement.value = '';
 
  renderTarefa();
+ salvarDados();
+
 }
-   
    }
+   buttonElement.onclick = adicionarterefas;
+
    function deletarTarefa(posicao){
      tarefas.splice(posicao, 1);
      renderTarefa();
+   salvarDados();
    }
+  
 
+function salvarDados(){
+   localStorage.setItem("@listaTarefas", JSON.stringify(tarefas));
+}
+ 
 
-
-
-
-
-
-
-
-
-
-
-   
-   buttonElement.onclick = adicionarterefas;
-   // function excluirTarefa(posicao){
-   //  tarefas.splice(posicao, 1);
-   //  renderTarefa();
-   // }

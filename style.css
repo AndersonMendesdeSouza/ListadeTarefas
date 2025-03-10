@@ -13,6 +13,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 #app{
     width: 600px;
@@ -58,7 +59,7 @@ flex-direction: column;
 }
 .corpo{
   margin-left:20px ;
- 
+  overflow-y: auto;
   
 }
 .corpo li{
